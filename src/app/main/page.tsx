@@ -2,7 +2,9 @@
 import { useEffect } from "react";
 import Image from "next/image";
 
-export default function Home() {
+import Link from "next/link";
+
+export default function Main() {
     // useEffect(() => {
     //     throw new Error()
     //   }, []);
@@ -31,6 +33,7 @@ export default function Home() {
               priority
             />
           </a>
+          <Link href="/form">form page</Link>
         </div>
       </div>
 
