@@ -29,7 +29,7 @@ export default function Demo() {
             <div>
                 <h2>Post</h2>
                 <div>
-                {data<DataProps>?.map((item, index) => (
+                {data?.map((item, index) => (
                     <div className="mb-5 md:mb-2" key={`article-${index}`}>
                         {index + 1} {item.title}
                     </div>

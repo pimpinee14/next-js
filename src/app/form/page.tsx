@@ -1,21 +1,13 @@
 'use client'
-import React from 'react'
+
 import Link from "next/link";
-import {createRoot} from "react-dom/client";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { StateMachineProvider, createStore } from "little-state-machine";
 import { useForm } from "react-hook-form";
 import styles from './styles.module.scss'
 
 import variables from '../variables.modules.scss'
 
-import Step1 from "./Step1";
-import Step2 from "./Step2";
-import Result from "./Result";
-
 import { FormProps } from './type'
 
-createStore({});
 
 const initialValues = {
   gender: "",
@@ -51,16 +43,7 @@ export default function Form() {
       <h1>Form Page</h1>
 
       <div className="container flex justify-center">
-      <StateMachineProvider>
-      <h1>Page Form Wizzard</h1>
-
-      <Router>
-        <Route exact path="/" component={Step1} />
-        <Route path="/step2" component={Step2} />
-        <Route path="/result" component={Result} />
-      </Router>
-    </StateMachineProvider>
-      {/* <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Email</label>
           <input
@@ -142,7 +125,7 @@ export default function Form() {
         <button type="submit">
           Submit
         </button>
-      </form> */}
+      </form>
     </div>
       <Link href="/">Return Home</Link>
       <style jsx>{`
@@ -156,3 +139,5 @@ export default function Form() {
     </main>
   );
 }
+
+
