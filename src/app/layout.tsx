@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <StyledJsxRegistry>{children}</StyledJsxRegistry>
+        <div id="root"></div>
       </body>
     </html>
   );
