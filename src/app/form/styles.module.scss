@@ -1,6 +1,14 @@
 @import '../variables.modules.scss';
 
+
 .errorMsg {
     color: red;
     font-size: 0.8rem;
+    &__first {
+        color: black;
+        &--one {
+            color: green;
+        }
+    }
 }
+ 

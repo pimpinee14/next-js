@@ -57,7 +57,8 @@ export default function Form() {
               }
             })}
           />
-          {errors.email && <p className={styles.errorMsg} >{errors.email.message as string}</p>}
+          {errors.email && <p className={styles['errorMsg__first--one']}>
+            <span className={styles.test}>{errors.email.message as string}</span></p>}
         </div>
         <div>
           <label>Select Gender</label>
@@ -77,7 +78,7 @@ export default function Form() {
             {...register("gender")}
           />
           <label htmlFor="female">Female</label>
-          {errors.gender && <p className={styles.errorMsg} >{errors.gender.message as string}</p>}
+          {errors.gender && <p className={styles.errorMsg__first} >{errors.gender.message as string}</p>}
         </div>
         <div>
           <label>Select Your Skills</label>
